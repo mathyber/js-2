@@ -1,27 +1,23 @@
-const map = require('./index');
+const symbolToHTML = require('./index');
 
 const assert = require('assert');
 
-describe("map", function() {
+describe("symbolToHTML", function() {
 
-    it('Должен вернуть массив, где каждое число увеличено на 1', () => {
-        let arr = [4,5,6];
-        assert.deepEqual(arr.map(m=>m+1), [5,6,7]);
+    it('Тип возвращаемых данных должен быть строковым', () => {
+        assert.equal(typeof symbolToHTML("ab<ce>"), "string");
     });
 
-    it('Должен вернуть массив, где каждый элемент массива увеличен на 1', () => {
-        let arr = ["hhh",5,6];
-        assert.deepEqual(arr.map(m=>m+1), ['hhh1',6,7]);
+    it('Должен вернуть строку с html-кодами', () => {
+        assert.equal(symbolToHTML("<&fgf\"gdgf'<grggre>dfg"),'&lt;&amp;fgf&quot;gdgf&apos;&lt;grggre&gt;dfg');
     });
 
-    it('Должен вернуть массив из трех "раз"', () => {
-        let arr = [4,5,6];
-        assert.deepEqual(arr.map(m=>"раз"), ["раз","раз","раз"]);
+    it('Должен вернуть \'Dimitri Vegas &amp; Like Mike vs. Bassjackers &amp; D&apos;Angello &amp; Francis - The Flight\'', () => {
+        assert.equal(symbolToHTML("Dimitri Vegas & Like Mike vs. Bassjackers & D'Angello & Francis - The Flight"),
+            'Dimitri Vegas &amp; Like Mike vs. Bassjackers &amp; D&apos;Angello &amp; Francis - The Flight');
     });
 
-    it('Должен вернуть пустой массив', () => {
-        let arr = [];
-        assert.deepEqual(arr.map(m=>m+1), []);
+    it('Должен вернуть строку с html-кодом', () => {
+        assert.equal(symbolToHTML("<"),"&lt;");
     });
-
 });

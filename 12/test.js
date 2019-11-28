@@ -1,27 +1,22 @@
-const map = require('./index');
+const steamrollArray = require('./index');
 
 const assert = require('assert');
 
-describe("map", function() {
+describe("steamrollArray", function() {
 
-    it('Должен вернуть массив, где каждое число увеличено на 1', () => {
-        let arr = [4,5,6];
-        assert.deepEqual(arr.map(m=>m+1), [5,6,7]);
+    it('Должен вернуть [1,2,3,4]', () => {
+        assert.deepEqual(steamrollArray(([1, [2], [3, [[4]]]])),[1,2,3,4]);
     });
 
-    it('Должен вернуть массив, где каждый элемент массива увеличен на 1', () => {
-        let arr = ["hhh",5,6];
-        assert.deepEqual(arr.map(m=>m+1), ['hhh1',6,7]);
+    it('Должен вернуть [1]', () => {
+        assert.deepEqual(steamrollArray(([[[[1]]]])),[1]);
     });
 
-    it('Должен вернуть массив из трех "раз"', () => {
-        let arr = [4,5,6];
-        assert.deepEqual(arr.map(m=>"раз"), ["раз","раз","раз"]);
+    it('Должен вернуть []', () => {
+        assert.deepEqual(steamrollArray(([[[[]]]])),[]);
     });
 
-    it('Должен вернуть пустой массив', () => {
-        let arr = [];
-        assert.deepEqual(arr.map(m=>m+1), []);
+    it('Должен вернуть [1,5,2]', () => {
+        assert.deepEqual(steamrollArray(([[[[1,5],2]]])),[1,5,2]);
     });
-
 });

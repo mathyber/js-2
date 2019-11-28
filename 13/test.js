@@ -1,27 +1,36 @@
-const map = require('./index');
+const twoArguments = require('./index');
 
 const assert = require('assert');
 
-describe("map", function() {
+describe("twoArguments", function() {
 
-    it('Должен вернуть массив, где каждое число увеличено на 1', () => {
-        let arr = [4,5,6];
-        assert.deepEqual(arr.map(m=>m+1), [5,6,7]);
+    it('Тип возвращаемых данных должен быть number', () => {
+        assert.equal(typeof twoArguments(3,5), 'number');
     });
 
-    it('Должен вернуть массив, где каждый элемент массива увеличен на 1', () => {
-        let arr = ["hhh",5,6];
-        assert.deepEqual(arr.map(m=>m+1), ['hhh1',6,7]);
+    it('Тип возвращаемых данных должен быть string', () => {
+        assert.equal(typeof twoArguments("ab","cd"), 'string');
     });
 
-    it('Должен вернуть массив из трех "раз"', () => {
-        let arr = [4,5,6];
-        assert.deepEqual(arr.map(m=>"раз"), ["раз","раз","раз"]);
+    it('Тип возвращаемых данных должен быть function', () => {
+        assert.equal(typeof twoArguments(21), 'function');
     });
 
-    it('Должен вернуть пустой массив', () => {
-        let arr = [];
-        assert.deepEqual(arr.map(m=>m+1), []);
+    it('Должен вернуть 5', () => {
+        assert.equal(twoArguments(2, 3), 5);
     });
 
+    it('Должен вернуть "ddrr"', () => {
+        assert.equal(twoArguments("dd", "rr"), "ddrr");
+    });
+
+    it('Должен вернуть 6', () => {
+        let foo = twoArguments(2);
+        assert.equal(foo(4), 6);
+    });
+
+    it('Должен вернуть "asbce"', () => {
+        let foo = twoArguments("asb");
+        assert.equal(foo("ce"), "asbce");
+    });
 });

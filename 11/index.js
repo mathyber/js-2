@@ -12,3 +12,5 @@ function dropElements(arr, func){
         else return arr;
     }
 }
+
+module.exports = dropElements;

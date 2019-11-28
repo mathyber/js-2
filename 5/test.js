@@ -1,27 +1,19 @@
-const map = require('./index');
+const spinalCase = require('./index');
 
 const assert = require('assert');
 
-describe("map", function() {
+describe("spinalCase", function() {
 
-    it('Должен вернуть массив, где каждое число увеличено на 1', () => {
-        let arr = [4,5,6];
-        assert.deepEqual(arr.map(m=>m+1), [5,6,7]);
+    it('Тип возвращаемых данных должен быть строкой', () => {
+        assert.equal(typeof spinalCase("dfgdf dfgdfg dfgdfg"), "string");
     });
 
-    it('Должен вернуть массив, где каждый элемент массива увеличен на 1', () => {
-        let arr = ["hhh",5,6];
-        assert.deepEqual(arr.map(m=>m+1), ['hhh1',6,7]);
+    it('Должен вернуть строку "мешок-картошки-100-кило"', () => {
+        assert.equal(spinalCase("Мешок картошки 100 кило"), "мешок-картошки-100-кило");
     });
 
-    it('Должен вернуть массив из трех "раз"', () => {
-        let arr = [4,5,6];
-        assert.deepEqual(arr.map(m=>"раз"), ["раз","раз","раз"]);
-    });
-
-    it('Должен вернуть пустой массив', () => {
-        let arr = [];
-        assert.deepEqual(arr.map(m=>m+1), []);
+    it('Должен вернуть строку "вау-как-круто-тут-идти-среди-снега"', () => {
+        assert.equal(spinalCase("ВАу КАК круто ТуТ Идти среДи сНЕга"), "вау-как-круто-тут-идти-среди-снега");
     });
 
 });

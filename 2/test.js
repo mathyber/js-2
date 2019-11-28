@@ -1,27 +1,23 @@
-const map = require('./index');
+const twoArrays = require('./index');
 
 const assert = require('assert');
 
-describe("map", function() {
+describe("twoArrays", function() {
 
-    it('Должен вернуть массив, где каждое число увеличено на 1', () => {
-        let arr = [4,5,6];
-        assert.deepEqual(arr.map(m=>m+1), [5,6,7]);
+    it('Должен вернуть массив [12,8,9,10,5]', () => {
+        assert.deepEqual(twoArrays([4, 1,12,8],[1,9,4,1,10,5]), [12,8,9,10,5]);
     });
 
-    it('Должен вернуть массив, где каждый элемент массива увеличен на 1', () => {
-        let arr = ["hhh",5,6];
-        assert.deepEqual(arr.map(m=>m+1), ['hhh1',6,7]);
+    it('Должен вернуть массив ["we", "rtr", "fr"]', () => {
+        assert.deepEqual(twoArrays(["sd","we", "ds", "fdd"],["sd", "ds","rtr", "fr", "fdd"]), ["we", "rtr", "fr"]);
     });
 
-    it('Должен вернуть массив из трех "раз"', () => {
-        let arr = [4,5,6];
-        assert.deepEqual(arr.map(m=>"раз"), ["раз","раз","раз"]);
+    it('Должен вернуть массив [12,8,9,10,5,6]', () => {
+        assert.deepEqual(twoArrays([4, 1,12,8,9,10,5,6],[1,4,1]), [12,8,9,10,5,6]);
     });
 
     it('Должен вернуть пустой массив', () => {
-        let arr = [];
-        assert.deepEqual(arr.map(m=>m+1), []);
+        assert.deepEqual(twoArrays([4, 1,12,8,9,10,5,6],[4,1,12, 1,12,8,9,10,5,6]), []);
     });
 
 });

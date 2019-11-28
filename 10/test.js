@@ -1,27 +1,27 @@
-const map = require('./index');
+const sumPrimeNumbers = require('./index');
 
 const assert = require('assert');
 
-describe("map", function() {
+describe("sumPrimeNumbers", function() {
 
-    it('Должен вернуть массив, где каждое число увеличено на 1', () => {
-        let arr = [4,5,6];
-        assert.deepEqual(arr.map(m=>m+1), [5,6,7]);
+    it('Тип возвращаемых данных должен быть number', () => {
+        assert.equal(typeof sumPrimeNumbers(5), "number");
     });
 
-    it('Должен вернуть массив, где каждый элемент массива увеличен на 1', () => {
-        let arr = ["hhh",5,6];
-        assert.deepEqual(arr.map(m=>m+1), ['hhh1',6,7]);
+    it('Должен вернуть 10', () => {
+        assert.equal(sumPrimeNumbers(5), 10);
     });
 
-    it('Должен вернуть массив из трех "раз"', () => {
-        let arr = [4,5,6];
-        assert.deepEqual(arr.map(m=>"раз"), ["раз","раз","раз"]);
+    it('Должен вернуть 0 для 1', () => {
+        assert.equal(sumPrimeNumbers(1), 0);
     });
 
-    it('Должен вернуть пустой массив', () => {
-        let arr = [];
-        assert.deepEqual(arr.map(m=>m+1), []);
+    it('Должен вернуть 0 для -1', () => {
+        assert.equal(sumPrimeNumbers(-1), 0);
+    });
+
+    it('Должен вернуть 2', () => {
+        assert.equal(sumPrimeNumbers(2), 2);
     });
 
 });

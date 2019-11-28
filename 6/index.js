@@ -10,3 +10,5 @@ function searchAndReplace(str, wordSearch, wordReplace){
             word[0].toUpperCase()==word[0]? wordReplace.charAt(0).toUpperCase()+wordReplace.slice(1)
                 : wordReplace.charAt(0).toLowerCase()+wordReplace.slice(1) : word).join(' ');
 }
+
+module.exports = searchAndReplace;

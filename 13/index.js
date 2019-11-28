@@ -8,3 +8,5 @@ function twoArguments(arg1, arg2 = false){
         return arg1+arg;
     }
 }
+
+module.exports = twoArguments;

@@ -10,3 +10,5 @@ function fearNotLetter(str){
     return res ==''? undefined : res
 
 }
+
+module.exports = fearNotLetter;

@@ -10,3 +10,5 @@ function sumAll(arr){
     }
     return sum;
 }
+
+module.exports = sumAll;

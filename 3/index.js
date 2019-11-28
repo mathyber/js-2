@@ -13,3 +13,5 @@ function filterArgs(arr, ...args){
         }
     }
 }
+
+module.exports = filterArgs;

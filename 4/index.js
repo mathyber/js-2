@@ -17,5 +17,6 @@ function whatIsInAName(arr, obj){
         if(s!=keysOfObj.length) return false;
         else return true;
     })
-    return arr;
 }
+
+module.exports = whatIsInAName;

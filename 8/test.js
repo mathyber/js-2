@@ -1,27 +1,18 @@
-const map = require('./index');
+const uniqueValues = require('./index');
 
 const assert = require('assert');
 
-describe("map", function() {
+describe("uniqueValues", function() {
 
-    it('Должен вернуть массив, где каждое число увеличено на 1', () => {
-        let arr = [4,5,6];
-        assert.deepEqual(arr.map(m=>m+1), [5,6,7]);
+    it('Должен вернуть массив [1,2,3]', () => {
+        assert.deepEqual(uniqueValues([1,2,3]), [1,2,3]);
     });
 
-    it('Должен вернуть массив, где каждый элемент массива увеличен на 1', () => {
-        let arr = ["hhh",5,6];
-        assert.deepEqual(arr.map(m=>m+1), ['hhh1',6,7]);
+    it('Должен вернуть массив [45,47,3,5,8]', () => {
+        assert.deepEqual(uniqueValues([45, 47, 1,2,3],[5,45,8,47]), [45,47,1,2,3,5,8]);
     });
 
-    it('Должен вернуть массив из трех "раз"', () => {
-        let arr = [4,5,6];
-        assert.deepEqual(arr.map(m=>"раз"), ["раз","раз","раз"]);
+    it('Должен вернуть массив [45,47,3,5,8,78]', () => {
+        assert.deepEqual(uniqueValues([45, 47, 1,2,3],[5,45,8,47],[5,45,78,8,47]), [45,47,1,2,3,5,8,78]);
     });
-
-    it('Должен вернуть пустой массив', () => {
-        let arr = [];
-        assert.deepEqual(arr.map(m=>m+1), []);
-    });
-
 });

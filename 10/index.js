@@ -12,3 +12,5 @@ function sumPrimeNumbers(n){
             sum+=i;
     return sum;
 }
+
+module.exports = sumPrimeNumbers;

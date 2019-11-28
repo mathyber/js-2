@@ -6,9 +6,11 @@ function twoArrays(arr1, arr2){
     let arr12 = arr1.concat(arr2);
     let res = [];
     for (let i=0 ; i<arr12.length ; i++) {
-        if (arr1.indexOf(arr12[i])==-1 || arr2.indexOf(arr12[i])==-1) {
+        if (arr1.indexOf(arr12[i])===-1 || arr2.indexOf(arr12[i])===-1) {
             res.push(arr12[i]);
         }
     }
     return res;
 }
+
+module.exports = twoArrays;

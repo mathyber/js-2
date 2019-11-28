@@ -7,3 +7,5 @@ function uniqueValues() {
         return self.indexOf(elem) === index;
     });
 }
+
+module.exports = uniqueValues;

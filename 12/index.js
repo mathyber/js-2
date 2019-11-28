@@ -11,3 +11,4 @@ function steamrollArray(array){
             result=result.concat(steamrollArray(array[i]));
     return result;
 }
+module.exports = steamrollArray;
