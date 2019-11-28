@@ -1,0 +1,48 @@
+info it worked if it ends with ok
+verbose cli [ 'C:\\Program Files (x86)\\nodejs\\\\node.exe',
+verbose cli   'C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+verbose cli   'install',
+verbose cli   'mocha' ]
+info using npm@1.1.0-3
+info using node@v0.6.10
+verbose config file C:\Users\iantonov\.npmrc
+verbose config file C:\Program Files (x86)\nodejs\etc\npmrc
+verbose config file C:\Program Files (x86)\nodejs\node_modules\npm\npmrc
+verbose mkdir done: C:\Users\iantonov\AppData\Roaming\npm 755
+verbose mkdir done: C:\Users\iantonov\Desktop\js-2 755
+verbose caching C:\Users\iantonov\Desktop\js-2\package.json
+verbose loadDefaults js-2@1.0.0
+verbose from cache C:\Users\iantonov\Desktop\js-2\package.json
+verbose cache add [ 'mocha', null ]
+silly cache add: name, spec, args [ undefined, 'mocha', [ 'mocha', null ] ]
+verbose parsed url { pathname: 'mocha', path: 'mocha', href: 'mocha' }
+verbose addNamed [ 'mocha', '' ]
+verbose addNamed [ null, '' ]
+silly name, range, hasData [ 'mocha', '', false ]
+verbose raw, before any munging mocha
+verbose url resolving [ 'https://registry.npmjs.org/', './mocha' ]
+verbose url resolved https://registry.npmjs.org/mocha
+http GET https://registry.npmjs.org/mocha
+ERR! Error: failed to fetch from registry: mocha
+ERR!     at C:\Program Files (x86)\nodejs\node_modules\npm\lib\utils\npm-registry-client\get.js:139:12
+ERR!     at cb (C:\Program Files (x86)\nodejs\node_modules\npm\lib\utils\npm-registry-client\request.js:32:9)
+ERR!     at Request._callback (C:\Program Files (x86)\nodejs\node_modules\npm\lib\utils\npm-registry-client\request.js:137:18)
+ERR!     at Request.callback (C:\Program Files (x86)\nodejs\node_modules\npm\node_modules\request\main.js:109:22)
+ERR!     at Request.<anonymous> (C:\Program Files (x86)\nodejs\node_modules\npm\node_modules\request\main.js:198:58)
+ERR!     at Request.emit (events.js:88:20)
+ERR!     at ClientRequest.<anonymous> (C:\Program Files (x86)\nodejs\node_modules\npm\node_modules\request\main.js:356:14)
+ERR!     at ClientRequest.emit (events.js:67:17)
+ERR!     at HTTPParser.onIncoming (http.js:1258:11)
+ERR!     at HTTPParser.onHeadersComplete (http.js:102:31)
+ERR! You may report this log at:
+ERR!     <http://github.com/isaacs/npm/issues>
+ERR! or email it to:
+ERR!     <npm-@googlegroups.com>
+ERR! 
+ERR! System Windows_NT 6.2.9200
+ERR! command "C:\\Program Files (x86)\\nodejs\\\\node.exe" "C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "mocha"
+ERR! cwd C:\Users\iantonov\Desktop\js-2
+ERR! node -v v0.6.10
+ERR! npm -v 1.1.0-3
+ERR! message failed to fetch from registry: mocha
+verbose exit [ 1, true ]

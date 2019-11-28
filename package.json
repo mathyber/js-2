@@ -1,0 +1,19 @@
+{
+  "author": "mathyber",
+  "name": "js-2",
+  "description": "js",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mathyber/js-2.git"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "engines": {
+    "node": "~0.6.10"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "optionalDependencies": {}
+}
