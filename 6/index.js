@@ -8,10 +8,13 @@ function searchAndReplace(str, wordSearch, wordReplace){
     return str.split(" ").map(word => {
         if (word.toLowerCase() === wordSearch.toLowerCase())
         {
-            if (word[0].toUpperCase() === word[0]) return wordReplace.charAt(0).toUpperCase() + wordReplace.slice(1);
-            else return wordReplace.charAt(0).toLowerCase() + wordReplace.slice(1);
+            if (word[0].toUpperCase() === word[0])
+                return wordReplace.charAt(0).toUpperCase() + wordReplace.slice(1);
+            else
+                return wordReplace.charAt(0).toLowerCase() + wordReplace.slice(1);
         }
-        else return word;
+        else
+            return word;
     }).join(' ');
 }
 
