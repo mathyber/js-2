@@ -7,7 +7,7 @@ function fearNotLetter(str){
     let letters = str.split("").sort();
     let letters_arr_en = arr_en.slice(arr_en.indexOf(letters[0]), arr_en.indexOf(letters[letters.length - 1]));
     let res = letters_arr_en.filter(i => letters.indexOf(i) < 0).join('');
-    return res === ''? undefined : res
+    return res === ''? undefined : res;
 
 }
 

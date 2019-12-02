@@ -5,9 +5,8 @@
 
 function sumAll(arr){
     let sum = arr[0] + arr[1];
-    for (let i = Math.min.apply(null, arr) + 1; i < Math.max.apply(null, arr); i++){
+    for (let i = Math.min.apply(null, arr) + 1; i < Math.max.apply(null, arr); i++)
         sum += i;
-    }
     return sum;
 }
 
