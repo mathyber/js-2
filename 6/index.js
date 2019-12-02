@@ -5,10 +5,17 @@
 // первого символа в исходном слове.
 
 function searchAndReplace(str, wordSearch, wordReplace){
-    return str.split(" ").map(word =>
-        word.toLowerCase()==wordSearch.toLowerCase()?
-            word[0].toUpperCase()==word[0]? wordReplace.charAt(0).toUpperCase()+wordReplace.slice(1)
-                : wordReplace.charAt(0).toLowerCase()+wordReplace.slice(1) : word).join(' ');
+    return str.split(" ").map(word => {
+        if (word.toLowerCase() === wordSearch.toLowerCase())
+        {
+            if (word[0].toUpperCase() === word[0])
+                return wordReplace.charAt(0).toUpperCase() + wordReplace.slice(1);
+            else
+                return wordReplace.charAt(0).toLowerCase() + wordReplace.slice(1);
+        }
+        else
+            return word;
+    }).join(' ');
 }
 
 module.exports = searchAndReplace;

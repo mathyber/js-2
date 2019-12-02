@@ -4,11 +4,11 @@
 
 function steamrollArray(array){
     let result=[];
-    for (let i=0; i<array.length; i++)
+    for (let i = 0; i < array.length; i++)
         if (!Array.isArray(array[i]))
             result.push(array[i]);
         else
-            result=result.concat(steamrollArray(array[i]));
+            result = result.concat(steamrollArray(array[i]));
     return result;
 }
 module.exports = steamrollArray;
