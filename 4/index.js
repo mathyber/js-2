@@ -11,11 +11,15 @@ function whatIsInAName(arr, obj){
         let s = 0;
         for (let i = 0; i < keysOfObj.length; i++){
             keyy = keysOfObj[i];
-            if (ob[keyy] === obj[keyy]) s++;
-            else return false;
+            if (ob[keyy] === obj[keyy])
+                s++;
+            else
+                return false;
         }
-        if(s != keysOfObj.length) return false;
-        else return true;
+        if(s != keysOfObj.length)
+            return false;
+        else
+            return true;
     })
 }
 
