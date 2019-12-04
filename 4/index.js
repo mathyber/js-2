@@ -10,7 +10,7 @@ function whatIsInAName(arr, obj){
     return arr.filter(ob => {
         let s = 0;
         for (let i = 0; i < keysOfObj.length; i++){
-            keyy = keysOfObj[i];
+            let keyy = keysOfObj[i];
             if (ob[keyy] === obj[keyy]) s++;
             else return false;
         }

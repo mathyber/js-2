@@ -22,5 +22,4 @@ describe("whatIsInAName", function() {
             [{ "apple": 1, "bat": 2 }]);
     });
 
-
 });
