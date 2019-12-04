@@ -2,13 +2,14 @@
 // и возвращает одномерный массив. Например:
 // steamrollArray([1, [2], [3, [[4]]]]) должна вернуть [1, 2, 3, 4].
 
-function steamrollArray(array){
-    let result = [];
-    for (let i = 0; i < array.length; i++)
-        if (!Array.isArray(array[i]))
-            result.push(array[i]);
+function steamrollArray(arr){
+    let res = [];
+    for (let i = 0; i < arr.length; i++)
+        if (!Array.isArray(arr[i]))
+            res.push(arr[i]);
         else
-            result = result.concat(steamrollArray(array[i]));
-    return result;
+            res = res.concat(steamrollArray(arr[i]));
+    return res;
 }
+
 module.exports = steamrollArray;
