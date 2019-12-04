@@ -16,7 +16,7 @@ function fearNotLetter(str){
 function fearNotLetter(str){
     let letters = str.split('').sort();
     let res = [];
-    for (let i = 0; i < letters.length-1; i++){
+    for (let i = 0; i < letters.length - 1; i++){
         if (letters[i].charCodeAt() + 1 !== letters[i + 1].charCodeAt()) {
             res.push(String.fromCharCode(letters[i].charCodeAt() + 1));
             letters.splice(i + 1, 0, String.fromCharCode(letters[i].charCodeAt() + 1));
