@@ -4,11 +4,12 @@
 
 function steamrollArray(arr){
     let res = [];
-    for (let i = 0; i < arr.length; i++)
-        if (!Array.isArray(arr[i]))
+    for (let i = 0; i < arr.length; i++){
+        if (typeof arr[i] !== 'object')
             res.push(arr[i]);
         else
             res = res.concat(steamrollArray(arr[i]));
+    }
     return res;
 }
 
