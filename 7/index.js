@@ -23,7 +23,7 @@ function fearNotLetter(str){
             i--;
         }
     }
-    return res.length === 0? undefined : res.join('');
+    return res.length === 0 ? undefined : res.join('');
 }
 
 module.exports = fearNotLetter;
